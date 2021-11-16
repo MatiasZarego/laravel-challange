@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ProspectsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index']);
+
+Route::get('/video', [VideoController::class, 'index']);
+
+Route::get('/prospects', [ProspectsController::class, 'index']);
+
+Route::post('/prospects', [ProspectsController::class, 'index']);

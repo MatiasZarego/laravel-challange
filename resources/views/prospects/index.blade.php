@@ -40,7 +40,7 @@
 <div class="container">
 
 
-<form method="POST" action="http://prospects.cabify.zarego.com/prospects" accept-charset="UTF-8"><input name="_token" type="hidden" value="sXE79pM1zGV5MWrtPY60K87SvtKy1H050kjxTLyB">
+<form method="POST" action="http://localhost/prospects" accept-charset="UTF-8"><input name="_token" type="hidden" value="sXE79pM1zGV5MWrtPY60K87SvtKy1H050kjxTLyB">
 
     <div class="row">
 		<div class="col-sm-1"></div>
