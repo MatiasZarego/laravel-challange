@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Prospect;
+use App\Mail\ProspectsMail;
 
 class ProspectsController extends Controller
 {
@@ -24,6 +25,6 @@ class ProspectsController extends Controller
         $prospect->lastname=$req->lastname;
         $prospect->email=$req->email;
         $prospect->save();
-        return redirect()->back();
+        return redirect()->action([ProspectsMail::class, 'index'], ['email' => $req->email]);
     }
 }

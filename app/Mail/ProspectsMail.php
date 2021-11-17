@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Mail\ProspectsMail;
 
 class ProspectsMail extends Mailable
 {
@@ -24,7 +25,9 @@ class ProspectsMail extends Mailable
         $email = new ProspectsMail;
 
         Mail::to($req->email)->send($email);
-        return "mensaje enviado";
+        $a = $req->email;
+        $a .= " estaremos en contacto!";
+        return redirect()->back()->withSuccess($a) ;
     }
 
     /**

@@ -25,4 +25,4 @@ Route::get('/prospects', [ProspectsController::class, 'index']);
 
 Route::post('/prospects', [ProspectsController::class, 'store']);
 
-Route::get('/contact', [ProspectsMail::class, 'index']);
+Route::get('/mail', [ProspectsMail::class, 'index']);
