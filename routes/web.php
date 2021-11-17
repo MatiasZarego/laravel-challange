@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProspectsController;
+use App\Mail\ProspectsMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::get('/video', [VideoController::class, 'index']);
 Route::get('/prospects', [ProspectsController::class, 'index']);
 
 Route::post('/prospects', [ProspectsController::class, 'store']);
+
+Route::get('/contact', [ProspectsMail::class, 'index']);
