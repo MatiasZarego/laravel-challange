@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css?family=Muli:100,700" rel="stylesheet" type="text/css">
 <!--link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet"  -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--link href="http://localhost/css/app.css" rel="stylesheet" type="text/css" -->
-<link href="http://localhost/css/cabify.css" rel="stylesheet" type="text/css">
+<!--link href="{{ url('/css/cabify.css') }}" rel="stylesheet" type="text/css" -->
+<link href="{{ url('/css/cabify.css') }}"  rel="stylesheet" type="text/css">
 <!-- Styles -->
 <style>
 
@@ -33,14 +33,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="logo">
-	<img src="http://localhost/img/logo.png" border="0">
+	<img src= "{{ url('/img/logo.png') }}" border="0">
 </div>		</div>
 		<div class="row">
 
 <div class="container">
 
 
-<form method="POST" action="http://localhost/prospects" accept-charset="UTF-8">
+<form method="POST" action="{{ url('/prospects') }}" accept-charset="UTF-8">
     @csrf
     <div class="row">
 		<div class="col-sm-1"></div>

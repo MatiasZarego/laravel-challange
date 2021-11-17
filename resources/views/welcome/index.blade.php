@@ -11,8 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:100,700" rel="stylesheet" type="text/css">
         <!--link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet"  -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!--link http://localhost/css/app.css" rel="stylesheet" type="text/css" -->
-        <link href="http://localhost/css/cabify.css" rel="stylesheet" type="text/css">
+        <!--link href="{{ url('/css/cabify.css') }}" rel="stylesheet" type="text/css" -->
+        <link href="{{ url('/css/cabify.css') }}" rel="stylesheet" type="text/css">
         <!-- Styles -->
         <style>
 
@@ -33,15 +33,15 @@
         <div class="container">
             <div class="row">
                 <div class="logo">
-        <img src="http://localhost/img/logo.png" border="0">
+        <img src="{{ url('/img/logo.png') }}" border="0">
     </div>		</div>
             <div class="row">
                     <div class="col-sm-1"></div>
-        <div class="col-sm-11 frase"><img src="http://localhost/img/frase.png" border="0"></div>
+        <div class="col-sm-11 frase"><img src="{{ url('/img/frase.png') }}" border="0"></div>
         <div class="col-sm-1"></div>
-        <div class="col-sm-5 menu"><a href="http://localhost/video"><img src="http://localhost/img/video.png" class="img-responsive" border="0"></a></div>
-        <div class="col-sm-6 menu"><a href="http://localhost/prospects"><img src="http://localhost/img/conocer.png" class="img-responsive" border="0"></a></div>
-        <div class="col-sm-12 footer"><img src="http://localhost/img/footer.png" class="img-responsive" border="0"></div>
+        <div class="col-sm-5 menu"><a href="{{ url('/video') }}"><img src="{{ url('/img/video.png') }}" class="img-responsive" border="0"></a></div>
+        <div class="col-sm-6 menu"><a href="{{ url('/prospects') }}"><img src="{{ url('/img/conocer.png') }}" class="img-responsive" border="0"></a></div>
+        <div class="col-sm-12 footer"><img src="{{ url('/img/footer.png') }}" class="img-responsive" border="0"></div>
         <!--iframe src="//player.vimeo.com/video/11712103?byline=0&amp;portrait=0" width="500" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </body>
 </html>
