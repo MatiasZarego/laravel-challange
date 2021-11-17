@@ -22,4 +22,4 @@ Route::get('/video', [VideoController::class, 'index']);
 
 Route::get('/prospects', [ProspectsController::class, 'index']);
 
-Route::post('/prospects', [ProspectsController::class, 'index']);
+Route::post('/prospects', [ProspectsController::class, 'store']);

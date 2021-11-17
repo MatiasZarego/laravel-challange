@@ -40,8 +40,8 @@
 <div class="container">
 
 
-<form method="POST" action="http://localhost/prospects" accept-charset="UTF-8"><input name="_token" type="hidden" value="sXE79pM1zGV5MWrtPY60K87SvtKy1H050kjxTLyB">
-
+<form method="POST" action="http://localhost/prospects" accept-charset="UTF-8">
+    @csrf
     <div class="row">
 		<div class="col-sm-1"></div>
         <div class="col-sm-5">
@@ -49,6 +49,7 @@
 			<label for="Nombre">Nombre</label>
 			<input class="form-control cust-text-rounded" placeholder="Ingrese el nombre" name="name" type="text">
 			<span class="text-danger"></span>
+			@error('name') {{ $message}} @enderror
 			</div>
 		</div>
         <div class="col-sm-5">
@@ -56,6 +57,7 @@
 			<label for="Apellido">Apellido</label>
 			<input class="form-control cust-text-rounded" placeholder="Ingrese el apellido" name="lastname" type="text">
 			<span class="text-danger"></span>
+			@error('lastname') {{ $message}} @enderror
 			</div>
 		</div>
 		<div class="col-sm-1"></div>
@@ -67,6 +69,7 @@
 			<label for="Mail">Mail</label>
 			<input class="form-control cust-text-rounded" placeholder="Ingrese el mail" name="email" type="text">
 			<span class="text-danger"></span>
+			@error('email') {{ $message}} @enderror
 			</div>
 		</div>
 		<div class="col-sm-1"></div>

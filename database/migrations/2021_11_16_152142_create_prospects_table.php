@@ -15,7 +15,11 @@ class CreateProspectsTable extends Migration
     {
         Schema::create('prospects', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('lastname');
+            $table->string('email')->unique();
             $table->timestamps();
+            $table->timestamp('email_verified_at')->nullable();
         });
     }
 
